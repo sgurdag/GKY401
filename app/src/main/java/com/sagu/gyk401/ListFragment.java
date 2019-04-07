@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -21,6 +22,10 @@ public class ListFragment extends Fragment {
     public String mParam1;
     public String mParam2;
 
+
+    
+
+
     private OnFragmentInteractionListener mListener;
 
     private ListView listView;
@@ -31,6 +36,8 @@ public class ListFragment extends Fragment {
                              Bundle savedInstanceState) {
 
         View view = inflater.inflate(R.layout.fragment_list, container, false);
+
+        Toast.makeText(getActivity(), mParam1 +" + " + mParam2 , Toast.LENGTH_SHORT).show();
 
         listView = view.findViewById(R.id.listview);
 

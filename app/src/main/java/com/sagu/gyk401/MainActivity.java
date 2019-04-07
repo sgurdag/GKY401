@@ -28,6 +28,7 @@ public class MainActivity extends AppCompatActivity implements ListFragment.OnFr
                 switch (item.getItemId()) {
                     case R.id.navigation_home:
                         selectedFragment = new HomeFragment();
+
                         break;
                     case R.id.navigation_health:
 
@@ -43,7 +44,6 @@ public class MainActivity extends AppCompatActivity implements ListFragment.OnFr
                 }
 
                 pushFragment(selectedFragment);
-
                 return false;
             }
         });
